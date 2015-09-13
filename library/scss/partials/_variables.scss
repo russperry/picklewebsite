@@ -1,0 +1,42 @@
+/******************************************************************
+Site Name:
+Author:
+
+Stylesheet: Variables
+
+*/
+
+$brand:		#03B010;
+
+$black:             #27252A;
+$black-:			#76757F;
+$black--:			#868B97;
+
+
+$white:             #fff;
+
+$light-gray:        #f8f9fa;
+$gray:              #F7F7F7;
+$dark-gray:			#D8D8D8;
+$text-color:        #5c6b80;
+$meta-gray:         #9fa6b4;
+
+$tan:               #eceee5;
+
+$green:             #03B010;
+
+$bones-pink:        #f01d4f;
+$blue:              #2980b9;
+
+$link-color:        $bones-pink;
+$link-hover:        darken($link-color, 9%);
+
+$border-color:      #ccc;
+$disabled-gray:     #cfcfcf;
+
+
+/*
+Here's a great tutorial on how to
+use color variables properly:
+http://sachagreif.com/sass-color-variables/
+*/

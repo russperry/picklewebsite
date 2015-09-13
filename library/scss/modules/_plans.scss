@@ -1,0 +1,440 @@
+.plans {
+
+	padding-bottom:100px;
+	
+	& > .content {
+		border-top: 1px solid $dark-gray;
+		padding-top:60px;
+	}
+
+	h2 {
+		text-align: center;
+	}
+}
+
+.plan-table {
+	@include flexbox;
+	@include flex-direction(row);
+	@include justify-content(space-between);
+	@include align-items(stretch);
+	width:100%;
+}
+
+.plan-switcher-title {
+	@extend %montserrat;
+	color: $black;
+	font-size:11px;
+	line-height:18px;
+	margin:10px 10px;
+	letter-spacing:3px;
+	background:transparent;
+	width: auto;
+}
+
+.plan-switcher-wrap {
+	text-align:center;
+	margin:0 auto;
+	margin-top:5px;
+	margin-bottom:35px;
+	cursor:pointer;
+	background:transparent;
+	@include flex;
+	@include align-items(center);
+	@include justify-content(center);
+	span {
+		@extend %montserrat;
+		font-size:11px;
+		line-height:18px;
+		margin:0 10px;
+	}
+
+	label.plan-switcher {
+
+		@include flex;
+		@include align-items(center);
+		@include align-content(center);
+		@include justify-content(center);
+		background-color: transparent;
+
+		span, .faketoggle {
+			width:auto;
+			display: inline-block;
+		}
+
+
+		span {
+			padding:0;
+			color:$green;
+			order:1;
+
+			+ span {
+				color: $black--;
+				order:3;
+			}
+		}
+
+		.faketoggle {
+			content:'';
+			width:37px;
+			height:18px;
+			border-radius:9px;
+			position: relative;
+			background:#F1F1F1;
+			border:1px solid #D1D1D1;
+			cursor:pointer;
+
+			&:after {
+				content:'';
+				position: absolute;
+				width:18px;
+				height:18px;
+				border-radius: 9px;
+				background: $green;
+				top:-1px;
+				right: 19px;
+				transition: all 0.5s ease-in-out;
+			}
+
+			+ span {
+				color: $black--;
+			}
+		}
+
+		input[type="checkbox"] {
+			display: none;
+		}
+
+		input:checked {
+
+			& + span {
+				color: $black--;
+
+				+ .faketoggle {
+					&:after {
+						right: -1px;
+					}
+
+					+ span {
+						color: $green;
+					}
+				}
+			}
+		}
+
+		&.annual-plan {
+			input {
+
+				& + span {
+					color: $black--;
+
+					& + .faketoggle {
+						&:after {
+							right: -1px;
+						}
+
+						+ span {
+							color: $green;
+						}
+					}
+				}
+			}
+
+		}
+
+		.faketoggle.checked {
+			&:after {
+				right: -1px;
+			}
+
+			+ span {
+				color: $green;
+			}
+		}
+	}
+}
+
+.plan-column {
+	width:30%;
+	position: relative;
+	border:1px solid $black;
+
+		padding-bottom:40px;
+	@include align-self(stretch);
+
+	.plan-name {
+		@extend %montserrat;
+		color: $black;
+		background:#FFF;
+		letter-spacing: 3px;
+		text-align:center;
+		font-size:11px;
+		line-height: 30px;
+		margin:0;
+		padding:0;
+	}
+
+	.plan-price {
+		background:$black;
+		font-family: $raleway;
+		text-align: center;
+		font-size:93px;
+		color:#fff;
+		line-height: 1;
+		padding:20px 0;
+		color:mix(#FFF, $black, 90%);
+		height:auto;
+
+		.plan-duration {
+			margin-top:8px;
+			display:block;
+			@extend %montserrat;
+			font-weight: $montserrat-bold;
+			font-size:10px;
+			text-align: center;
+			color:mix(#FFF, $black, 90%);
+		}
+
+		&.hidden {
+			display: none;
+		}
+	}
+
+	.plan-item {
+		height:auto;
+		display:block;
+		width:90%;
+		margin:0 auto;
+		@extend %montserrat;
+		padding: 17.5px 0 ;
+	    font-size: 11px ;
+	    line-height: 15px;
+		color:$black--;
+		position: relative;
+		text-align: left;
+		border-top:1px solid $dark-gray;
+
+		b {
+			color: $black;
+		}
+
+		&.plan-item-empty {
+			display: none;
+		}
+
+		&.plan-item-id-0 {
+			border-top:none;
+		}
+
+		&.plan-item-has-tooltip {
+
+			span {
+				cursor:pointer;
+				text-decoration: underline;
+			}
+
+			
+			
+			.plan-item-tooltip {
+				display: none;
+				position: absolute;
+				top:75%;
+				background-color:$black;
+				width:auto;
+				min-width:65%;
+				text-align: center;
+				max-width:100%;
+				left:0;
+				color: #FFF;
+				text-transform: none;
+				font-family: $sans-serif;
+				font-size:14px;
+				font-weight:normal;
+				padding:20px;
+				z-index: 9999;
+				margin-top:3px;
+
+				&:before {
+					
+					content:'';
+					position: absolute;
+					left:0;
+					top:-4px;
+					width: 0;
+					height: 0;
+					border-style: solid;
+					border-width: 4px 0 0 4px;
+					border-color: transparent transparent transparent $black;
+				}
+			}
+
+			span.hover {
+				color: $black;
+
+				+ .plan-item-tooltip {
+					display: block;
+				}
+			}
+		}
+		
+		&.tt-ptp-empty-row {
+			border-top:none;
+		}
+
+		&:first-of-type {
+			border:none;
+		}
+	}
+
+	ul {
+		margin: 0 30px;
+		li {
+			@extend %montserrat;
+			font-size:11px;
+			line-height: 50px;
+			border-bottom:1px solid $dark-gray;
+			&:last-of-type {
+				border-bottom: none;
+			}
+
+			&.has-info {
+				position: relative;
+				cursor:pointer;
+				span {
+					position: relative;
+					&:after {
+						position:absolute;
+						left:0;
+						right:0;
+						width:100%;
+						bottom:0px;
+						height:1px;
+						border-bottom:1px dashed $black;
+						content:'';
+					}
+				}
+
+				.info {
+					display: none;
+					position: absolute;
+					top:calc(100% - 10px);
+					max-width:100%;
+					background: $black;
+				}
+
+				&:hover {
+					color: $black;
+					.info {
+						display: block;
+						font-family: $raleway;
+						font-size:13px;
+						text-transform: none;
+						line-height: 1.5;
+						color:#fff;
+						font-weight:300;
+						padding:15px;
+
+						&:before {
+							position: absolute;
+							content: '';
+							top:-3px;
+							left:calc(50% - 2.5px);
+							width: 0;
+							height: 0;
+							border-style: solid;
+							border-width: 0 2.5px 3px 2.5px;
+							border-color: transparent transparent $black transparent;
+						}
+					}
+				}
+			}
+		}
+	}
+
+
+
+	.plan-cta {
+		width:90%;
+		left:5%;
+		background:transparent;
+		a.plan-button {
+			@extend .button-black-outline;
+			background:#FFF!important;
+			width:100%;
+			margin:0;
+		}
+	}
+			
+
+	.plan-cta {
+		width:90%;
+		left:5%;
+		background:transparent;
+		position: absolute;
+		bottom:-25px;
+		.button-black-outline { 
+			background:#fff;
+		}
+
+		.plan-button {
+			margin:0!important;
+			width:100%;
+			display: block;
+			text-align: center;
+		}
+	}
+
+	&.plan-featured{
+		border:1px solid $green;
+		box-shadow:0 0 0 1px $green;
+		
+
+		.plan-name {
+			color: $green;
+		}
+		
+		.plan-cta {
+			a.plan-button {
+				@extend .button-green-fill;
+				margin:0;
+				background: $green!important;
+				color:#FFF;
+				border:1px solid $green;
+				box-shadow:none;
+				-webkit-box-shadow:none;
+			}
+		}
+	}
+}
+
+@media only screen and (max-width: 900px) {
+	.plan-column {
+		.plan-price {
+			font-size:70px;
+		}
+	}
+}
+
+@media only screen and (max-width: 720px) {
+	.plan-table {
+		display: block;
+	}
+	.plan-column,
+	.plan-column.plan-featured {
+		
+		width:100%;
+		max-width:400px;
+		display: block;
+		margin:0 auto;
+		margin-bottom:50px;
+		.plan-price {
+			font-size:70px;
+		}
+	}
+
+	.plan-column:last-of-type {
+		margin-top:0;
+	}
+}
+
+
+	

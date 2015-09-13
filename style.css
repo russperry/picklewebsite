@@ -1,0 +1,34 @@
+/******************************************************************
+Theme Name: Design Pickle
+Theme URI: http://designpickle.com;
+Description: Custom Theme for Design Pickle
+Author: Your Carl Fairclough
+Author URI: http://carlfairclough.me
+Version: 1.0
+
+
+
+MAKE SURE TO READ BELOW BEFORE EDITING
+--------------------------------------
+
+You may be thinking…
+
+WHOA, WHOA, WHOA…WHAT HAPPENED HERE?
+
+But before you freak out, let me take a few minutes to explain.
+
+I'm using SASS here. I compiled it locally using Codekit, you should probably use it:;
+http://incident57.com/codekit/
+
+But if you're a Windows user, here's an alternative:;
+http://compass.handlino.com/
+
+******************************************************************/
+
+/*
+WordPress Probz
+*/
+
+.sticky {}          /* DO NOT EDIT THIS */
+.gallery-caption {} /* THESE ARE USELESS */
+.bypostauthor {}    /* THEY ARE ONLY TO KEEP THEME CHECK HAPPY */

@@ -1,0 +1,161 @@
+.page-template-page-squeeze-page-php {
+
+	background-image:url(../images/header-bg.png);
+	background-size:cover;
+	height:100%;
+	min-height:100vh;
+	@include flexbox;
+	@include flex-direction(column);
+	@include justify-content(space-between);
+	header {
+		background: none;
+		h1 {
+
+		}
+	}
+
+	header {
+		padding:0;
+		nav {
+			// position: absolute;
+
+
+		}
+
+		.logo {
+			height:40px;
+			line-height: 40px;
+			display: inline-block;
+			padding-left:50px;
+
+			@extend %montserrat;
+			font-size:12px;
+			letter-spacing: 0.4em;
+			color: $black;
+			text-decoration: none;
+		}
+	}
+
+	footer {
+
+	}
+
+	section.squeeze {
+		@include flex(2);
+		@include align-self(center);
+		@include flexbox;
+		@include align-items(center);
+		background-color: rgba($black, 0.95);
+		padding-top:120px;
+		padding-bottom:60px;
+		width:100%;
+		margin-top:0;
+		margin-bottom:0;
+
+		.content {
+			@include flexbox;
+			@include align-content(center);
+			
+		@include flex-wrap(wrap);
+		}
+
+		.squeeze-copy {
+			@include flex(1.5 0 450px);
+			@include align-self(center);
+
+			h1 {
+				color:#FFF;
+				background: rgba(#FFF, 0.1);
+				padding:40px;
+				margin-bottom:0;
+			}
+
+			p {
+				color:mix(#FFF, $black, 90%);
+				margin-top:0;
+				margin-bottom:0;
+				padding-left:40px;
+				padding-right:25%;
+
+				&.subhead {
+					padding-top:20px;
+					padding-bottom:20px;
+					background: rgba(#FFF, 0.05);
+				}
+
+				&.subhead-alt {
+					padding-top:40px;
+					padding-bottom:40px;
+				}
+
+				a.button-white-outline {
+					margin:0;
+					text-align: center;
+				}
+			}
+		}
+
+		.squeeze-form {
+			@include flex(1 0 400px);
+		}
+	}
+}
+
+ @media only screen and (max-width: 900px) {
+ 	.page-template-page-squeeze-page-php {
+		background-image:url(../images/header-bg.png);
+		height:100%;
+		min-height:100vh;
+		@include flexbox;
+		@include flex-direction(column);
+		@include justify-content(space-between);
+
+		section.squeeze {
+			@include flex(2);
+			@include align-self(center);
+			@include flexbox;
+			@include align-items(center);
+			background-color: rgba($black, 0.95);
+			padding-top:60px;
+			padding-bottom:60px;
+			width:100%;
+			margin-top:0;
+			margin-bottom:0;
+
+			.content {
+				max-width:550px;
+
+				.squeeze-copy, .squeeze-form {
+					@include flex(1 0 100%);
+				}
+
+				.squeeze-form {
+					padding-top:40px;
+				}
+			}
+		}
+	}
+}
+
+ @media only screen and (max-width: 600px) {
+ 	.page-template-page-squeeze-page-php {
+ 		background-image:none;
+		section.squeeze {
+			padding-bottom:20px;
+
+			.content {
+
+				.squeeze-copy {
+					h1, p {
+						padding-left:20px;
+						padding-right:20px;
+					}
+
+					h1 {
+						padding:20px;
+					}
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,27 @@
+body.page-template-page-home,
+body.page-template-page-home-v2,
+body.page-template-page-home-v3
+ {
+	header {
+		background-image:url(../images/header-bg.png);
+		background-size:cover;
+		background-position:center;
+		border-bottom:1px solid $dark-gray;
+	}
+
+	.footer-cta {
+		background: $green;
+	}
+
+	footer {
+		background: $green;
+	}
+
+}
+
+body.page-template-page-home {
+	.core-point {
+		padding-top:120px; // account for nav
+		height:100vh;
+	}
+}

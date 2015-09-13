@@ -1,0 +1,36 @@
+body.page-template-page-home-v3
+ {
+	header {
+		background-image:url(../images/header-bg.png);
+		background-size:cover;
+		background-position:center;
+		border-bottom:1px solid $dark-gray;
+	}
+
+	.footer-cta {
+		border-top:1px solid $dark-gray;
+		background: #fff;
+		color:$black;
+		padding-bottom:100px;
+		h2, p {
+			color: $black;
+		}
+
+		h2 {
+			margin-bottom:0;
+		}
+
+		p.subhead {
+			margin: 35px 0;
+		}
+	}
+
+	footer {
+		background: #fff;
+
+		.content {
+			border-top:1px solid $dark-gray;
+		}
+	}
+
+}

@@ -1,0 +1,99 @@
+body.page-template-page-contact {
+
+	header {
+		.subhead-alt {
+			margin-bottom:0;
+		}
+	}
+	section.contact {
+		position: relative;
+		&:after {
+			// use this to give the psuedo-overlay effect
+			border-top:1px solid $dark-gray;
+			position: absolute;
+			height:70px;
+			left:0;
+			bottom: 0;
+			width:100%;
+			background-color:#FFF;
+			content:'';
+			z-index: 50;
+		}
+
+		form {
+			position: relative;
+			z-index: 100;
+		}
+	}
+
+	section.the-team {
+		padding:0;
+		.content {
+			border-bottom:1px solid $dark-gray;
+			@include flexbox;
+			@include align-content(center);
+			@include align-items(center);
+			@include justify-content(center);
+			padding-bottom:60px;
+		}
+
+		.team-images {
+			padding-right:20px;
+			padding-left:20px;
+			@include flexbox;
+			@include justify-content(center);
+			img {
+				width:auto;
+				height:auto;
+			}
+		}
+
+		.team-content {
+			padding-right:20px;
+			padding-left:20px;
+			width:auto;
+		}
+
+		h2 {
+			font-size:14px;
+			color:$black;
+			margin-bottom:0;
+			margin-top:0;
+		}
+
+		p {
+			margin:0;
+		}
+	}
+
+	section.footer-cta {
+		padding-bottom:0;
+		padding-top:40px;
+		.content {
+			padding-bottom:40px;
+			border-bottom:1px solid $dark-gray;
+		}
+	}
+}
+
+@media only screen and (max-width: 620px) {
+	body.page-template-page-contact {
+		section.the-team {
+
+			.content {
+				display: block;
+			}
+			.team-content {
+				float: none;
+				overflow: hidden;
+				width:100%;
+				display: block;
+				text-align: center;
+
+				img {
+
+				}
+			}
+		}
+	}
+}

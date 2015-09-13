@@ -1,0 +1,141 @@
+.inpage-contact {
+	opacity:0;
+}
+
+form.contact-form,
+form.wpcf7-form {
+	width:100%;
+	max-width:550px;
+	border:1px solid $black--;
+	background:#fff;
+	margin:0 auto;
+	overflow:visible;
+	z-index: 9999;
+	text-align: left;
+
+
+	br {
+		display: none!important;
+	}
+	h2 {
+		text-align:center;
+		font-size:11px;
+		color:$black;
+		padding:0 40px;
+		letter-spacing: 3px;
+	}
+
+	input.wpcf7-not-valid {
+		border-bottom:1px solid red;
+	}
+
+	span.wpcf7-not-valid-tip {
+		@extend %montserrat;
+		background-color: red;
+    color: #FFF;
+    padding: 0 15px;
+    font-size:12px;
+	}
+
+	.wpcf7-checkbox {
+		label {
+			@include flexbox;
+			@include align-items(center);
+
+			input {
+				margin-top:4px;
+				@include order(2);
+				margin-right:0;
+			}
+
+			span {
+				margin-left:auto;
+				@include order(1);
+			}
+		}
+	}
+
+	.wpcf7-response-output {
+		margin: 0;
+		padding:15px;
+		border:none;
+		border-top:1px solid $black;
+		text-align: center;
+		@extend %montserrat;
+		font-size:12px;
+		line-height: 16px;
+		color: green;
+
+		&.wpcf7-validation-errors {
+			color:red;
+			border-top:1px solid red;
+		}
+	}
+	.inner-contact-form {
+		border-top:1px solid $black--;
+		padding:6%;
+		overflow: hidden;
+
+		.newsletter-area {
+			@extend %helvetica;
+			font-size:13px;
+			text-align: right;
+			margin-bottom:25px;
+
+			h3 {
+				@extend %helvetica;
+				font-weight:400;
+				color:$black;
+				text-transform: none;
+				font-size:13px;
+				letter-spacing:0;
+				margin-bottom:5px;
+			}
+
+			.wpcf7-list-item {
+				display: block;
+			}
+
+			label,
+			.inputwrap {
+				background:transparent;
+				padding-top:0;
+				padding-bottom:0;
+				margin-bottom:4px;
+
+				span {
+					padding:0;
+				}
+
+			}
+
+			input[type="checkbox"] {
+				margin-left:5px;
+			}
+
+		}
+	}
+}
+
+@media only screen and (max-width: 700px) {
+	body.page-template-page-contact section.contact {
+		padding:0;
+
+		input.wpcf7-submit {
+			width:100%;
+		}
+	}
+
+	form.contact-form, form.wpcf7-form {
+		border-left:none;
+		border-right:none;
+	}
+
+	.footer-cta {
+		padding:0;
+		form.contact-form, form.wpcf7-form {
+			border-left:1px solid $dark-gray;
+			border-right:1px solid $dark-gray;
+		}
+	}
+}

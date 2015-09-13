@@ -1,0 +1,200 @@
+ /******************************************************************
+Site Name:
+Author:
+
+Stylesheet: Grid Stylesheet
+
+I've seperated the grid so you can swap it out easily. It's
+called at the top the style.scss stylesheet.
+
+There are a ton of grid solutions out there. You should definitely
+experiment with your own. Here are some recommendations:
+
+http://gridsetapp.com - Love this site. Responsive Grids made easy.
+http://susy.oddbird.net/ - Grids using Compass. Very elegant.
+http://gridpak.com/ - Create your own responsive grid.
+https://github.com/dope/lemonade - Neat lightweight grid.
+
+
+The grid below is a custom built thingy I modeled a bit after
+Gridset. It's VERY basic and probably shouldn't be used on
+your client projects. The idea is you learn how to roll your
+own grids. It's better in the long run and allows you full control
+over your project's layout.
+
+******************************************************************/
+
+body, html {
+  width:100%;
+  overflow-x: hidden;
+}
+
+#content, .content {
+  width:100%;
+  max-width:1150px;
+  margin:0 auto;
+}
+
+.footer-cta-clear {
+  width:100%;
+  display: block;
+  height:100px;
+}
+
+section,
+header,
+footer {
+  padding-left:20px!important;
+  padding-right:20px!important;
+}
+
+
+.viewport-height-block {
+  min-height: 85vh;
+  max-height: 750px
+}
+
+.hidden {
+  display: none;
+}
+
+// flex based properties
+
+.flex {
+  @include flexbox;
+}
+
+.contents-center {
+  @include align-items(center);
+}
+
+
+
+// flex columns
+.full-width {
+  width:100%;
+}
+
+.flex-wrap {
+  @include flex-wrap(wrap);
+}
+
+.flex-1-col {
+  @include flex(1 100%);
+  @include flex-direction(column);
+}
+
+.flex-2-col {
+  @include flex(1 50%);
+  margin-right:2.5vw;
+
+  &:last-of-type {
+    margin-right:0;
+    margin-left:2.5vw;
+  }
+}
+
+header, .header {
+  width:100%;
+  @include flex-direction(row);
+}
+
+header {
+  padding-top:60px; // acount for nav
+  &.has-testimonial {
+    padding-bottom:40px;
+  }
+}
+
+header nav {
+  position:absolute;
+  top:0;
+}
+
+.header-navigation {
+  width:100%;
+}
+
+.header-content {
+  @include flexbox;
+  @include align-items(center);
+  @include flex(2);
+}
+
+.header-content-inner {
+  margin:auto;
+}
+
+.flex-stretch {
+  @include align-content(stretch); 
+}
+
+.flex-align-self-right {
+  margin-left:auto;
+}
+
+.text-center {
+  text-align:center;
+}
+
+.text-right {
+  text-align:right;
+}
+
+// Padding vals
+.padding-60 {
+  padding: 60px 0;
+}
+
+.wide-650 {
+  width:100%;
+  max-width:650px;
+  margin-left:auto;
+  margin-right:auto;
+}
+
+header, footer, section, div {
+  &.background-green {
+  background-color: $green;
+}
+  &.background-white {
+    background-color:#fff;
+  }
+
+  &.background-gray {
+    background-color:$gray;
+  }
+}
+
+header .wide-650 {
+  @include align-self(center);
+}
+
+.footer-cta {
+  padding-top:60px;
+  padding-bottom:60px;
+}
+
+header {
+  position:relative;
+}
+
+footer {
+
+  .content {
+    border-top:1px solid #FFF;
+  }
+  .logo {
+    float:right;
+    display: block;
+  }
+
+  ul {
+    display: block;
+  }
+}
+
+.how-it-works {
+  padding: 100px 0;
+  border-top:1px solid $dark-gray;
+}

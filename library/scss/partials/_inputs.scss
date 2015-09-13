@@ -1,0 +1,88 @@
+form {
+
+	label,
+	p.inputwrap {
+		background:#f2f2f2;
+		width:100%;
+		display: block;
+
+		span {
+			padding:0;
+		}
+
+		span.fakelabel {
+			@extend %montserrat;
+			font-size:11px;
+			letter-spacing: 3px;
+			display:block;
+			padding:5px 15px 0px;
+		}
+		
+		margin-bottom:25px;
+	}
+
+
+	input[type="text"],
+	input[type="email"],
+	input[type="number"],
+	input[type="search"],
+	textarea,
+	select {
+		-mox-appearance: none;
+		-webkit-appearance: none;
+		appearance:none;
+		border-radius:0;
+		width:100%;
+		padding:5px 15px 0px 15px;
+		font-size:20px;
+		background:transparent;
+		@extend %raleway;
+		border:0;
+		border-bottom:1px solid $black;
+		position: relative;
+		padding-bottom:1px;
+		background-color:transparent;
+		line-height:30px;
+		border-radius: 0;
+		margin:0;
+		box-shadow:none;
+
+		&:focus {
+			outline:none;
+			border-bottom:2px solid $green;
+			padding-bottom:0;
+		}
+	}
+
+
+	input[type="text"],
+	input[type="email"],
+	input[type="number"],
+	input[type="search"],
+	select {
+		box-sizing: border-box;
+	}
+
+	textarea {
+		line-height:35px;
+		height:210px;
+		overflow: visible;
+		white-space:nowrap;
+	}
+
+	select {
+		margin-top:5px;
+		appearance: none;
+		-webkit-appearance: none;
+	    background-image: url(../images/arrow-down.png);
+	    background-repeat: no-repeat;
+	    background-position: 95% center;
+	}
+
+	input[type="button"],
+	input[type="submit"],
+	button {
+		margin-right:0;
+		float:right;
+	}
+}

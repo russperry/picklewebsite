@@ -1,0 +1,53 @@
+section.faqs {
+	padding-top:0px;
+	.faq-content {
+		@include flexbox;
+		@include flex-wrap(wrap);
+		@include justify-content(space-between);
+	}
+
+	.faq {
+		padding-bottom:50px;
+		width:45%;
+
+		.h5 {
+			font-size:12px;
+			margin-bottom:0;
+			line-height: 1.5;
+			color: $black;
+		}
+
+		p {
+			@extend %helvetica;
+			font-size:14px;
+			line-height: 21px;
+			color:$black-;
+		}
+
+		ul, ol {
+			@extend %helvetica;
+			list-style:initial;
+			font-size:14px;
+			line-height: 21px;
+			color:$black;
+			margin-left:20px;
+		}
+
+		ol {
+			list-style-type: decimal;
+		}
+	}
+}
+
+@media only screen and (max-width: 620px) {
+	section.faqs {
+		padding-top:0px;
+		.faq-content {
+			display: block;
+		}
+
+		.faq {
+			width:100%;
+		}
+	}
+}

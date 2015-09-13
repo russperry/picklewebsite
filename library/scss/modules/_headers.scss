@@ -1,0 +1,19 @@
+header {
+
+	&.viewport-height-block {
+		height: auto;
+		min-height:85vh;
+	}
+
+	.dheader-content {
+		.wide-650 {
+			padding: 70px 0;
+		}
+	}
+
+	&.no-buttons {
+		p.subhead:after {
+			display: none;
+		}
+	}
+}
