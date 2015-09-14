@@ -458,6 +458,10 @@ function wpe_gallery_shortcode( $attr ) {
   $i = 0;
   foreach ( $attachments as $id => $attachment ) {
 
+    if ($i > 50) {
+      $hiddenelem = 'hidden';
+    }
+
     $attr = ( trim( $attachment->post_excerpt ) ) ? array( 'aria-describedby' => "$selector-$id" ) : '';
     
     $image_output = wp_get_attachment_image( $id, $atts['size'], false, $attr );
@@ -467,8 +471,7 @@ function wpe_gallery_shortcode( $attr ) {
     $src = wp_get_attachment_image_src( $id, 'full' );
     $image_padding_bottom = 100 * ( $src[2] / $src[1] );
 
-
-    $output .= "<div class='gallery-item'>";
+    $output .= "<div class='gallery-item".$hiddenelem."'>";
     $output .= "
       <div class='gallery-icon'>
         <div class='gallery-inner' style='padding-bottom:".$image_padding_bottom."%'>
