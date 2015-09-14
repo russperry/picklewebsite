@@ -501,10 +501,5 @@ $('.show-more-gallery').click(function(e) {
 })
 
 
-// $('.show_button').click(function() {
-//     $('ul li:gt(3)').show();
-// });
-
-
 
 }); /* end of as page load scripts */
