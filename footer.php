@@ -122,6 +122,7 @@
 
 		<?php get_custom('footer_scripts'); ?>
 		<?php wp_footer(); ?>
+		
 
 	</body>
 

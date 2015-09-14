@@ -468,5 +468,12 @@ function homeBlocksScroll() {
 
 }
 
+$('.grid-item').masonry({
+    // options
+    itemSelector: '.gallery-item',
+    columnWidth: '.gallery-item',
+    percentPosition: true
+});
+
 
 }); /* end of as page load scripts */
