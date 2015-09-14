@@ -468,12 +468,43 @@ function homeBlocksScroll() {
 
 }
 
+$('.gallery-item:gt(25)').addClass('hidden');
+
 $('.grid-item').masonry({
     // options
     itemSelector: '.gallery-item',
     columnWidth: '.gallery-item',
     percentPosition: true
 });
+
+$('.show-more-gallery').click(function(e) {
+    e.preventDefault();
+
+    var totElems = $('.grid-item').find('.gallery-item').length;
+    var hidElems = $('.grid-item').find('.gallery-item.hidden').length;
+    var toShow = totElems - hidElems + 25;
+
+    if (toShow > totElems) {
+        $('.show-more-gallery').fadeOut();
+    }
+
+    $('.gallery-item:lt('+toShow+')').removeClass('hidden');
+
+    $('.grid-item').masonry({
+        // options
+        itemSelector: '.gallery-item',
+        columnWidth: '.gallery-item',
+        percentPosition: true
+    });
+
+    
+})
+
+
+// $('.show_button').click(function() {
+//     $('ul li:gt(3)').show();
+// });
+
 
 
 }); /* end of as page load scripts */

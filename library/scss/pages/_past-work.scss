@@ -9,16 +9,22 @@ body.page-template-page-past-work-php {
 			margin-bottom:40px;
 		}
 
+		.grid {
+			position: relative;
+		}
+
+		.grid p {
+			    margin: 0;
+			    position: absolute;
+			    bottom: 20px;
+			    width: 100%;
+			    max-width: 100%;
+			    text-align: center;
+		}
+
 		.grid-item {
 			position: relative;
 			width:100%;
-			// max-width: 1150px;
-		 //  	-webkit-columns: 4;
-		 //    -moz-columns: 4;
-   //        	columns: 4;
-		 //  	-webkit-column-gap: 0;
-	  //    	-moz-column-gap: 0;
-   //        	column-gap: 0;
 
 			&:after {
 				width:100%;
@@ -56,6 +62,10 @@ body.page-template-page-past-work-php {
 						width:100%;
 						height:auto;
 					}
+				}
+
+				&.hidden {
+					display: none;
 				}
 			}
 		}

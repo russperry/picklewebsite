@@ -2635,6 +2635,15 @@ body.page-template-page-past-work-php section.past-work {
     max-width: 400px;
     margin: 0 auto;
     margin-bottom: 40px; }
+  body.page-template-page-past-work-php section.past-work .grid {
+    position: relative; }
+  body.page-template-page-past-work-php section.past-work .grid p {
+    margin: 0;
+    position: absolute;
+    bottom: 20px;
+    width: 100%;
+    max-width: 100%;
+    text-align: center; }
   body.page-template-page-past-work-php section.past-work .grid-item {
     position: relative;
     width: 100%; }
@@ -2668,6 +2677,8 @@ body.page-template-page-past-work-php section.past-work {
           left: 0;
           width: 100%;
           height: auto; }
+      body.page-template-page-past-work-php section.past-work .grid-item .gallery-item.hidden {
+        display: none; }
 body.page-template-page-past-work-php section.testimonials {
   background: #FFF;
   padding-top: 0;
