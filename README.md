@@ -102,6 +102,11 @@ Ensure that the FAQs shortcode is in the main content area of the page
 ### Contact page
 - All header fields
 - `contact_form_shortcode` - Enter the shortcode for the form here.
+- `support_team_img_1_url` - The URL for the first of the support images (optional)
+- `support_team_img_2_url` - The URL for the first of the support images (optional)
+- `support_team_img_3_url` - The URL for the first of the support images (optional)
+- `support_team_title', 1)` - Title for the support section underneath the form
+- `support_team_content', 1)` - Content for the support section
 - All footer fields
 
 ### Squeeze Page

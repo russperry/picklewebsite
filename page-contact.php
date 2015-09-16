@@ -23,14 +23,19 @@
 				<section class="the-team">
 					<div class="content">
 						<div class="team-images">
-							<img src="<?php echo get_template_directory_uri(); ?>/library/images/russ_small.png">
-							<img src="<?php echo get_template_directory_uri(); ?>/library/images/russ_small.png">
-							<img src="<?php echo get_template_directory_uri(); ?>/library/images/russ_small.png">
+							<?php if (!empty(get_post_meta(get_the_ID(), 'support_team_img_1_url', 1))) { ?>
+								<img src="<?php echo get_post_meta(get_the_ID(), 'support_team_img_3_url', 1); ?>">
+							<?php } ?>
+							<?php if (!empty(get_post_meta(get_the_ID(), 'support_team_img_2_url', 1))) { ?>
+								<img src="<?php echo get_post_meta(get_the_ID(), 'support_team_img_3_url', 1); ?>">
+							<?php }; ?>
+							<?php if (!empty(get_post_meta(get_the_ID(), 'support_team_img_3_url', 1))) { ?>
+								<img src="<?php echo get_post_meta(get_the_ID(), 'support_team_img_3_url', 1); ?>">
+							<?php } ?>
 						</div>
 						<div class="team-content">
-							<h2>Meet The Support Team</h2>
-							<p>We’re available from 9AM to 5PM PST, Monday to Friday.<br>
-								We’ll try to reply within 2 hours if we’re in the office.</p>
+							<h2><?php echo get_post_meta(get_the_ID(), 'support_team_title', 1); ?></h2>
+							<p><?php echo get_post_meta(get_the_ID(), 'support_team_content', 1); ?></p>
 						</div>
 					</div>
 				</section>
