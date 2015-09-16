@@ -39,7 +39,7 @@ These don't apply to the `Free Request` template or the `Squeeze Page` template.
 - `footer_secondary_button_text` *optional*
 - `footer_secondary_button_url` *optional*
 - `footer_color` - This accepts values of `green`, `white` or `gray`
-*Note: if you want to display an inpage contact form after clicking a button, please set the URL to be the [Contact Form 7 shortcode].
+*Note: if you want to display an inpage contact form after clicking a button, please set the URL to be the `[Contact Form 7 shortcode]`.*
 
 ### Testimonials
 Global testimonials can be set in Apearrance > Design Pickle Theme Settings > Testimonials.
@@ -60,7 +60,7 @@ The Homepage template should be the default homepage template, it contains the f
 - All header fields
 - `core_point_1_img` - The image URL for the first image
 - `core_point_1_subhead` - The subhead for the block
-- `core_point_1_paras` - The accompanying text. Please wrap this in <p> </p> tags.
+- `core_point_1_paras` - The accompanying text. Please wrap this in `<p> ... </p>` tags.
 - `core_point_2_img`
 - `core_point_2_subhead`
 - `core_point_2_paras`
@@ -73,7 +73,7 @@ The Homepage template should be the default homepage template, it contains the f
 ### How It Works Page
 - All header fields
 - `howitworks_1_title`
-- `howitworks_1_para` - Do not wrap this in <p> </p> tags
+- `howitworks_1_para` - Do not wrap this in `<p> ... </p>` tags
 - `howitworks_2_title`
 - `howitworks_2_para`
 - `howitworks_3_title`
