@@ -131,12 +131,6 @@ $('a[href="/contact?inpage"]').click(function(e){
         $('.inpage-contact').removeClass('hidden').animate({'opacity' : 1});
     }, 500);
 
-    
-    // $.get('/wp-content/themes/designpickle/includes/email-call.php', function( data ) {
-    //     $('.inpage-contact').html( data );
-    //     alert( "Load was performed." );
-    // });
-
 });
 
 

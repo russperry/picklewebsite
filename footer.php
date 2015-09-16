@@ -45,7 +45,6 @@
 											<?php }; ?>
 										</div>
 										<p></p>
-										<!-- <p class="button-support"><a href="#">Got Questions? Let's Chat</a></p> -->
 										
 									</div>
 								</div>

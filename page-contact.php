@@ -11,7 +11,7 @@
 
 
 				<section class="contact background-<?php echo do_shortcode(get_post_meta(get_the_ID(), 'header_color', true)); ?>">
-					<?php include_once('includes/contact-form.php'); ?>
+					<?php echo do_shortcode(get_post_meta(get_the_ID(), 'contact_form_shortcode', 1)); ?>
 				</section>
 
 				<section class="contact-methods">
