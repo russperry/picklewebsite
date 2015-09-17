@@ -204,13 +204,8 @@ $('body').on('change', '.plan-switcher input[type="checkbox"]', function(){
 
         $('.plan-switcher').addClass('annual-plan');
 
-        $('.plan-button').each(function(){
-            var but = $(this);
-            var url = but.attr('href') + '-annual';
-
-            but.attr('href', url);
-
-        });
+        $('.monthly-cta').addClass('hidden');
+        $('.annual-cta').removeClass('hidden');
 
     } else {
         // monthly pricing
@@ -220,14 +215,10 @@ $('body').on('change', '.plan-switcher input[type="checkbox"]', function(){
             $('.monthly-price').removeClass('hidden').animate({'opacity' : 1}, 500);
         }, 500)
 
-         $('.plan-switcher').removeClass('annual-plan');
-        $('.plan-button').each(function(){
-            var but = $(this);
-            var url = but.attr('href').replace('-annual','');;
-
-            but.attr('href', url);
-
-        });
+        $('.plan-switcher').removeClass('annual-plan');
+        
+        $('.monthly-cta').removeClass('hidden');
+        $('.annual-cta').addClass('hidden');
     }
 });
 
