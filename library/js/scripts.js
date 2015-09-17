@@ -222,7 +222,7 @@ $('body').on('change', '.plan-switcher input[type="checkbox"]', function(){
     }
 });
 
-
+$('select option:first').before('<option value="Please select" disabled selected>Please Select</option>');
 
 $('header nav').click(function(e){
     e.stopPropagation();
