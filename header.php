@@ -101,12 +101,9 @@
 								<cite><?php echo get_post_meta(get_the_ID(), 'header_testimonial_person', 1); ?></cite>
 								<p><?php echo get_post_meta(get_the_ID(), 'header_testimonial_text', 1); ?></p>
 							</blockquote>
-							<div class="find-out-more-button">Find out more</div>
 						</div>
 					</div>
-				<?php } else if (is_page_template("page-home.php") || is_page_template("page-home-v2.php") || is_page_template("page-home-v3.php")) { ?>
-					<div class="find-out-more"><div class="find-out-more-button">Find out more</div></div>
-				<?php }; ?>
+				<?php } ?>
 				
 
 			</header>
