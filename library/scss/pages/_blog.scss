@@ -204,9 +204,9 @@ article {
 
 		.byline {
 			@extend %montserrat;
-			font-size:11px;
+			font-size:11px!important;
 			color:#868B97;
-			line-height: 14px;
+			line-height: 14px!important;
 		}
 	section.entry-content {
 		padding-left:0!important;

@@ -3089,9 +3089,9 @@ article {
     article h1:hover, article h1 a:hover {
       text-decoration: underline; }
   article .byline {
-    font-size: 11px;
+    font-size: 11px !important;
     color: #868B97;
-    line-height: 14px; }
+    line-height: 14px !important; }
   article section.entry-content {
     padding-left: 0 !important;
     padding-right: 0 !important; }
