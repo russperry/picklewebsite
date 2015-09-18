@@ -257,9 +257,7 @@ article {
 	overflow:hidden;
 	@include flexbox;
 	@include align-items(center);
-	height: 222px;
-	    height: 25vw;
-	    max-height: 222px;
+	height: auto;
 
 	a.featuredimg-inner {
 		

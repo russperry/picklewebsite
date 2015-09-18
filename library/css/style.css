@@ -3147,9 +3147,7 @@ article {
   -webkit-align-items: center;
   -moz-align-items: center;
   align-items: center;
-  height: 222px;
-  height: 25vw;
-  max-height: 222px; }
+  height: auto; }
   .featuredimg a.featuredimg-inner img {
     width: 100%; }
 
