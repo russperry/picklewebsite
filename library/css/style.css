@@ -1768,16 +1768,6 @@ section.faqs {
 .inpage-contact {
   opacity: 0; }
 
-[id^=wufoo] {
-  width: 100%;
-  max-width: 550px;
-  border: 1px solid #868B97;
-  background: #fff;
-  margin: 0 auto;
-  overflow: visible;
-  z-index: 9999;
-  text-align: left; }
-
 form.contact-form,
 form.wpcf7-form {
   width: 100%;
