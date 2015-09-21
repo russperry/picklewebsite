@@ -79,7 +79,8 @@ Stylesheet: Button Styles
   @extend %button;
 }
 
-.button-green-fill {
+.button-green-fill,
+.button-green-fill:visited {
   @extend %button;
   background: $green;
   border:1px solid $green;
@@ -93,7 +94,8 @@ Stylesheet: Button Styles
   }
 }
 
-.button-white-fill {
+.button-white-fill,
+.button-white-fill:visited {
   @extend %button;
   background: #FFF;
   color:$green;
@@ -106,7 +108,8 @@ Stylesheet: Button Styles
   }
 }
 
-.button-secondary {
+.button-secondary,
+.button-secondary:visited {
   @extend %button;
   background:transparent;
   color:#FFF;
@@ -119,7 +122,8 @@ Stylesheet: Button Styles
   }
 }
 
-.button-white-outline {
+.button-white-outline,
+.button-white-outline:visited {
   @extend %button;
   background:transparent;
   color: #FFF;
@@ -132,7 +136,8 @@ Stylesheet: Button Styles
   }
 }
 
-.button-black-outline {
+.button-black-outline,
+.button-black-outline:visited {
   @extend %button;
   background:transparent;
   color: $black;
@@ -145,7 +150,8 @@ Stylesheet: Button Styles
   }
 }
 
-.button-support {
+.button-support,
+.button-support:visited {
 
   a, a:visited, a:hover, a:active, a:focus {
     text-decoration: underline;

@@ -485,7 +485,12 @@ I've edited it a bit, but it's a nice starting point.
 h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, p.subhead, .button-support, blockquote cite, form label span.fakelabel, body.page-template-page-free-request section.request-form-section .content form .file-upload-wrap span.fakelabel,
 form p.inputwrap span.fakelabel, .plan-switcher-title, .plan-switcher-wrap span, .plan-column .plan-name, .plan-column .plan-price .plan-duration, .plan-column .plan-item, .plan-column ul li, form.contact-form span.wpcf7-not-valid-tip,
 form.wpcf7-form span.wpcf7-not-valid-tip, form.contact-form .wpcf7-response-output,
-form.wpcf7-form .wpcf7-response-output, header nav ul.top-nav li a, footer nav ul.footer-nav li a, footer nav ul.footer-nav li.current-menu-item a, .logo a, .logo.fallback a, .logo a:visited, .logo a:hover, .logo a:active, .logo a:focus, .button-primary, .button-green-fill, .plan-column.plan-featured .plan-cta a.plan-button, .button-white-fill, .button-secondary, .button-white-outline, .button-black-outline, .plan-column .plan-cta a.plan-button, .find-out-more-button, body.page-template-page-free-request section.request-form-section .content form .inputfilewrap .choose-file, body.page-template-page-free-request section.request-form-section .content form .extrainputwrap .delete-field, .blog-content .sidebar .widget h4, .blog-content .sidebar .widget .searchform label, .blog-content .sidebar .widget .searchform body.page-template-page-free-request section.request-form-section .content form .file-upload-wrap, body.page-template-page-free-request section.request-form-section .content form .blog-content .sidebar .widget .searchform .file-upload-wrap, .blog-content .sidebar .widget ul li a, .blog-content .sidebar .widget_text p a, article .byline, .page-template-page-squeeze-page-php header .logo {
+form.wpcf7-form .wpcf7-response-output, header nav ul.top-nav li a, footer nav ul.footer-nav li a, footer nav ul.footer-nav li.current-menu-item a, .logo a, .logo.fallback a, .logo a:visited, .logo a:hover, .logo a:active, .logo a:focus, .button-primary, .button-green-fill, .plan-column.plan-featured .plan-cta a.plan-button,
+.button-green-fill:visited, .button-white-fill,
+.button-white-fill:visited, .button-secondary,
+.button-secondary:visited, .button-white-outline,
+.button-white-outline:visited, .button-black-outline, .plan-column .plan-cta a.plan-button,
+.button-black-outline:visited, .find-out-more-button, body.page-template-page-free-request section.request-form-section .content form .inputfilewrap .choose-file, body.page-template-page-free-request section.request-form-section .content form .extrainputwrap .delete-field, .blog-content .sidebar .widget h4, .blog-content .sidebar .widget .searchform label, .blog-content .sidebar .widget .searchform body.page-template-page-free-request section.request-form-section .content form .file-upload-wrap, body.page-template-page-free-request section.request-form-section .content form .blog-content .sidebar .widget .searchform .file-upload-wrap, .blog-content .sidebar .widget ul li a, .blog-content .sidebar .widget_text p a, article .byline, .page-template-page-squeeze-page-php header .logo {
   font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-weight: 700;
   text-transform: uppercase;
@@ -2331,7 +2336,12 @@ Author:
 Stylesheet: Button Styles
 
 ******************************************************************/
-.button-primary, .button-green-fill, .plan-column.plan-featured .plan-cta a.plan-button, .button-white-fill, .button-secondary, .button-white-outline, .button-black-outline, .plan-column .plan-cta a.plan-button, .find-out-more-button {
+.button-primary, .button-green-fill, .plan-column.plan-featured .plan-cta a.plan-button,
+.button-green-fill:visited, .button-white-fill,
+.button-white-fill:visited, .button-secondary,
+.button-secondary:visited, .button-white-outline,
+.button-white-outline:visited, .button-black-outline, .plan-column .plan-cta a.plan-button,
+.button-black-outline:visited, .find-out-more-button {
   display: inline-block;
   position: relative;
   text-decoration: none;
@@ -2350,7 +2360,12 @@ Stylesheet: Button Styles
   text-align: center;
   -webkit-transition: all 0.14s ease-in-out;
   transition: all 0.14s ease-in-out; }
-  .button-primary:after, .button-green-fill:after, .plan-column.plan-featured .plan-cta a.plan-button:after, .button-white-fill:after, .button-secondary:after, .button-white-outline:after, .button-black-outline:after, .plan-column .plan-cta a.plan-button:after, .find-out-more-button:after {
+  .button-primary:after, .button-green-fill:after, .plan-column.plan-featured .plan-cta a.plan-button:after,
+  .button-green-fill:visited:after, .button-white-fill:after,
+  .button-white-fill:visited:after, .button-secondary:after,
+  .button-secondary:visited:after, .button-white-outline:after,
+  .button-white-outline:visited:after, .button-black-outline:after, .plan-column .plan-cta a.plan-button:after,
+  .button-black-outline:visited:after, .find-out-more-button:after {
     bottom: -1px;
     left: 0;
     width: 100%;
@@ -2387,52 +2402,92 @@ Stylesheet: Button Styles
       .disabled.button-primary:hover:after, .disabled.button-green-fill:hover:after, .disabled.button-white-fill:hover:after, .disabled.button-secondary:hover:after, .disabled.button-white-outline:hover:after, .disabled.button-black-outline:hover:after, .plan-column .plan-cta a.disabled.plan-button:hover:after, .disabled.find-out-more-button:hover:after, .disabled.button-primary:focus:after, .disabled.button-green-fill:focus:after, .disabled.button-white-fill:focus:after, .disabled.button-secondary:focus:after, .disabled.button-white-outline:focus:after, .disabled.button-black-outline:focus:after, .plan-column .plan-cta a.disabled.plan-button:focus:after, .disabled.find-out-more-button:focus:after {
         background: transparent; }
 
-.button-green-fill, .plan-column.plan-featured .plan-cta a.plan-button {
+.button-green-fill, .plan-column.plan-featured .plan-cta a.plan-button,
+.button-green-fill:visited,
+.plan-column.plan-featured .plan-cta a.plan-button:visited {
   background: #03B010;
   border: 1px solid #03B010;
   color: #FFF; }
-  .button-green-fill:hover, .plan-column.plan-featured .plan-cta a.plan-button:hover, .button-green-fill:focus, .plan-column.plan-featured .plan-cta a.plan-button:focus {
+  .button-green-fill:hover, .plan-column.plan-featured .plan-cta a.plan-button:hover, .button-green-fill:focus, .plan-column.plan-featured .plan-cta a.plan-button:focus,
+  .button-green-fill:visited:hover,
+  .plan-column.plan-featured .plan-cta a.plan-button:visited:hover,
+  .button-green-fill:visited:focus,
+  .plan-column.plan-featured .plan-cta a.plan-button:visited:focus {
     border-bottom: 1px solid #014c07; }
-    .button-green-fill:hover:after, .plan-column.plan-featured .plan-cta a.plan-button:hover:after, .button-green-fill:focus:after, .plan-column.plan-featured .plan-cta a.plan-button:focus:after {
+    .button-green-fill:hover:after, .plan-column.plan-featured .plan-cta a.plan-button:hover:after, .button-green-fill:focus:after, .plan-column.plan-featured .plan-cta a.plan-button:focus:after,
+    .button-green-fill:visited:hover:after,
+    .plan-column.plan-featured .plan-cta a.plan-button:visited:hover:after,
+    .button-green-fill:visited:focus:after,
+    .plan-column.plan-featured .plan-cta a.plan-button:visited:focus:after {
       background: #014c07; }
 
-.button-white-fill {
+.button-white-fill,
+.button-white-fill:visited {
   background: #FFF;
   color: #03B010;
   border: 1px solid #FFF; }
-  .button-white-fill:hover, .button-white-fill:focus {
+  .button-white-fill:hover, .button-white-fill:focus,
+  .button-white-fill:visited:hover,
+  .button-white-fill:visited:focus {
     border-bottom: 1px solid #cccccc; }
-    .button-white-fill:hover:after, .button-white-fill:focus:after {
+    .button-white-fill:hover:after, .button-white-fill:focus:after,
+    .button-white-fill:visited:hover:after,
+    .button-white-fill:visited:focus:after {
       background: #cccccc; }
 
-.button-secondary {
+.button-secondary,
+.button-secondary:visited {
   background: transparent;
   color: #FFF;
   border: 1px solid #FFF; }
-  .button-secondary:hover, .button-secondary:focus {
+  .button-secondary:hover, .button-secondary:focus,
+  .button-secondary:visited:hover,
+  .button-secondary:visited:focus {
     border-bottom: 1px solid #cccccc; }
-    .button-secondary:hover:after, .button-secondary:focus:after {
+    .button-secondary:hover:after, .button-secondary:focus:after,
+    .button-secondary:visited:hover:after,
+    .button-secondary:visited:focus:after {
       background: #cccccc; }
 
-.button-white-outline {
+.button-white-outline,
+.button-white-outline:visited {
   background: transparent;
   color: #FFF;
   border: 1px solid #FFF; }
-  .button-white-outline:hover, .button-white-outline:focus {
+  .button-white-outline:hover, .button-white-outline:focus,
+  .button-white-outline:visited:hover,
+  .button-white-outline:visited:focus {
     border-bottom: 1px solid #FFF; }
-    .button-white-outline:hover:after, .button-white-outline:focus:after {
+    .button-white-outline:hover:after, .button-white-outline:focus:after,
+    .button-white-outline:visited:hover:after,
+    .button-white-outline:visited:focus:after {
       background: #FFF; }
 
-.button-black-outline, .plan-column .plan-cta a.plan-button {
+.button-black-outline, .plan-column .plan-cta a.plan-button,
+.button-black-outline:visited,
+.plan-column .plan-cta a.plan-button:visited {
   background: transparent;
   color: #27252A;
   border: 1px solid #27252A; }
-  .button-black-outline:hover, .plan-column .plan-cta a.plan-button:hover, .button-black-outline:focus, .plan-column .plan-cta a.plan-button:focus {
+  .button-black-outline:hover, .plan-column .plan-cta a.plan-button:hover, .button-black-outline:focus, .plan-column .plan-cta a.plan-button:focus,
+  .button-black-outline:visited:hover,
+  .plan-column .plan-cta a.plan-button:visited:hover,
+  .button-black-outline:visited:focus,
+  .plan-column .plan-cta a.plan-button:visited:focus {
     border-bottom: 1px solid #27252A; }
-    .button-black-outline:hover:after, .plan-column .plan-cta a.plan-button:hover:after, .button-black-outline:focus:after, .plan-column .plan-cta a.plan-button:focus:after {
+    .button-black-outline:hover:after, .plan-column .plan-cta a.plan-button:hover:after, .button-black-outline:focus:after, .plan-column .plan-cta a.plan-button:focus:after,
+    .button-black-outline:visited:hover:after,
+    .plan-column .plan-cta a.plan-button:visited:hover:after,
+    .button-black-outline:visited:focus:after,
+    .plan-column .plan-cta a.plan-button:visited:focus:after {
       background: #27252A; }
 
-.button-support a, .button-support a:visited, .button-support a:hover, .button-support a:active, .button-support a:focus {
+.button-support a, .button-support a:visited, .button-support a:hover, .button-support a:active, .button-support a:focus,
+.button-support:visited a,
+.button-support:visited a:visited,
+.button-support:visited a:hover,
+.button-support:visited a:active,
+.button-support:visited a:focus {
   text-decoration: underline;
   color: #fff;
   padding: 10px; }
