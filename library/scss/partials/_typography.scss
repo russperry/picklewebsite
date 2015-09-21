@@ -205,7 +205,17 @@ blockquote {
   }
 }
 
+a, a:visited {
+  color:$green;
+}
 
+a:hover, a:active {
+  color: darken($green, 10%);
+}
+
+h1 a, h1 a:visited, h1 a:hover, h1 a:active {
+  color:$black;
+}
 
 
 .background-green {

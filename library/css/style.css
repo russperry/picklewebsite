@@ -584,6 +584,15 @@ blockquote p {
   margin-top: 6px;
   margin-bottom: 0; }
 
+a, a:visited {
+  color: #03B010; }
+
+a:hover, a:active {
+  color: #027e0b; }
+
+h1 a, h1 a:visited, h1 a:hover, h1 a:active {
+  color: #27252A; }
+
 .background-green h1, .background-green h2, .background-green h3, .background-green h4, .background-green h5 {
   color: #FFF; }
 .background-green p {
