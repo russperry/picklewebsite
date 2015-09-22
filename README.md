@@ -84,8 +84,9 @@ The Homepage template should be the default homepage template, it contains the f
 - All footer fields
 
 ### Pricing Page
-Please place the pricing table content in the main content area of the page.
+Please place the pricing table shortcode in the main content area of the page.
 - All header fields
+- `plan_section_title` - The title above the plans
 - All testimonial fields
 - All footer fields
 
