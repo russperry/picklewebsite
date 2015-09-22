@@ -491,8 +491,12 @@ function wpe_gallery_shortcode( $attr ) {
 require_once('theme-settings.php');
 
 function get_custom ($name) {
-    $settings = get_option( "theme_settings" );
-    echo stripslashes($settings[$name]);
+    if (empty(get_post_meta(get_the_ID(), $name, 1))) {
+      $settings = get_option( "theme_settings" );
+      echo stripslashes($settings[$name]);
+    } else {
+      echo get_post_meta(get_the_ID(), $name, 1);
+    }
   }
 
 

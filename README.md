@@ -54,7 +54,9 @@ If custom fields are not set for the individual pages, then they will fall back 
 - `testimonial_2_img` - A URL to their image
 - `testimonial_2_position` - Their job title
 - `testimonial_2_testimonial` - The content of the testimonial
+
 ## Page Templates
+
 ### Homepage
 The Homepage template should be the default homepage template, it contains the following custom fields:
 - All header fields
