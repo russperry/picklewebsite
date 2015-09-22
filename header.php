@@ -37,7 +37,7 @@
 
 			<header class="header flex flex-column background-<?php echo do_shortcode(get_post_meta(get_the_ID(), 'header_color', true)); if(is_home()){echo 'green';}; ?> flex-wrap <?php if (is_page_template("page-home.php") || is_page_template("page-home-v2.php") || is_page_template("page-home-v3.php")) { echo "viewport-height-block"; }; ?> <?php if(!empty(get_post_meta(get_the_ID(), 'header_testimonial_person', 1)) && !empty(get_post_meta(get_the_ID(), 'header_testimonial_text', 1))) { ?>no-testimonial<?php }; ?> <?php headerbuttonsexist(); ?>" role="banner" itemscope itemtype="http://schema.org/WPHeader" <?php if(!empty($bgimg)) { echo 'style="background-image:url('.$bgimg.');"'; } ?> >
 				<div class="sidemenubutton"></div>
-				<div class="logo fallback contents-center" itemscope itemtype="http://schema.org/Organization"><a href="<?php echo home_url(); ?>" rel="nofollow"><img src="<?php echo get_template_directory_uri(); ?>/library/images/logo-small.png"></a></div>
+				<div class="logo fallback contents-center" itemscope itemtype="http://schema.org/Organization"><a href="<?php echo home_url(); ?>" rel="nofollow"><img src="<?php echo get_template_directory_uri(); ?>/library/images/logo-large.png"></a></div>
 				<nav>
 
 					<div class="logo contents-center" itemscope itemtype="http://schema.org/Organization"><a href="<?php echo home_url(); ?>" rel="nofollow"><img src="<?php echo get_template_directory_uri(); ?>/library/images/logo-large.png"></a></div>

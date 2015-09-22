@@ -124,6 +124,11 @@ function bones_scripts_and_styles() {
 
   if (!is_admin()) {
 
+  		// Use googles jQuery
+		wp_deregister_script('jquery');
+        wp_register_script('jquery', 'https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js', false, '2.1.4');
+
+
 		// modernizr (without media query polyfill)
 		wp_register_script( 'bones-modernizr', get_stylesheet_directory_uri() . '/library/js/libs/modernizr.custom.min.js', array(), '2.5.3', false );
 
@@ -145,7 +150,7 @@ function bones_scripts_and_styles() {
 		and your site will load faster.
 		*/
 		wp_enqueue_script( 'jquery' );
-		wp_enqueue_script( 'bones-masonry' );
+		wp_enqueue_script( 'jquery-masonry' );
 		wp_enqueue_script( 'bones-js' );
 
 	}
@@ -166,21 +171,6 @@ function bones_theme_support() {
 
 	// rss thingy
 	add_theme_support('automatic-feed-links');
-
-	// adding post format support
-	add_theme_support( 'post-formats',
-		array(
-			'aside',             // title less blurb
-			'gallery',           // gallery of images
-			'link',              // quick link to other site
-			'image',             // an image
-			'quote',             // a quick quote
-			'status',            // a Facebook like status update
-			'video',             // video
-			'audio',             // audio
-			'chat'               // chat transcript
-		)
-	);
 
 	// wp menus
 	add_theme_support( 'menus' );
@@ -264,9 +254,7 @@ RANDOM CLEANUP ITEMS
 *********************/
 
 // remove the p from around imgs (http://css-tricks.com/snippets/wordpress/remove-paragraph-tags-from-around-images/)
-function bones_filter_ptags_on_images($content){
-	return preg_replace('/<p>\s*(<a .*>)?\s*(<img .* \/>)\s*(<\/a>)?\s*<\/p>/iU', '\1\2\3', $content);
-}
+
 
 // This removes the annoying […] to a Read More link
 function bones_excerpt_more($more) {

@@ -220,6 +220,7 @@ function bones_comments( $comment, $args, $depth ) {
       </section>
       <?php comment_reply_link(array_merge( $args, array('depth' => $depth, 'max_depth' => $args['max_depth']))) ?>
     </article>
+  </div>
   <?php // </li> is added by WordPress automatically ?>
 <?php
 } // don't remove this bracket!
@@ -487,9 +488,7 @@ function wpe_gallery_shortcode( $attr ) {
   return $output;
 }
 
-
 require_once('theme-settings.php');
-
 
 function get_custom ($name) {
     $settings = get_option( "theme_settings" );

@@ -4,16 +4,24 @@
  * ILC Tabbed Settings Page
  */
 
+
+global $pagenow;
+ if ($pagenow == 'themes.php' && $_GET['page'] == 'theme-settings') {
+ 	$settingsPageCurr = true;
+ }
+
 add_action( 'init', 'admin_init' );
 add_action( 'admin_menu', 'settings_page_init' );
 
-if(function_exists( 'wp_enqueue_media' )){
+if ($settingsPageCurr == true) {
+if(function_exists( 'wp_enqueue_media')){
     wp_enqueue_media();
   }else{
     wp_enqueue_style('thickbox');
     wp_enqueue_script('media-upload');
     wp_enqueue_script('thickbox');
   }
+}
 
 function admin_init() {
 	$settings = get_option( "theme_settings" );
@@ -26,12 +34,16 @@ function admin_init() {
 }
 
 function settings_page_init() {
+	// Add item to menu
 	$theme_data = get_theme_data( TEMPLATEPATH . '/style.css' );
 	$settings_page = add_theme_page( $theme_data['Name']. ' Theme Settings', $theme_data['Name']. ' Theme Settings', 'edit_theme_options', 'theme-settings', 'settings_page' );
+
 	add_action( "load-{$settings_page}", 'load_settings_page' );
+
 }
 
 function load_settings_page() {
+	// Triggered on settings save
 	if ( $_POST["ilc-settings-submit"] == 'Y' ) {
 		check_admin_referer( "ilc-settings-page" );
 		save_theme_settings();
@@ -42,6 +54,7 @@ function load_settings_page() {
 }
 
 function save_theme_settings() {
+	// Save the settings
 	global $pagenow;
 	$settings = get_option( "theme_settings" );
 	
@@ -122,6 +135,8 @@ function admin_tabs( $current = 'general' ) {
 }
 
 function settings_page() {
+
+
 	global $pagenow;
 	$settings = get_option( "theme_settings" );
 	$theme_data = get_theme_data( TEMPLATEPATH . '/style.css' );
