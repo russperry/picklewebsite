@@ -71,15 +71,21 @@
 						<?php if(!empty(get_post_meta(get_the_ID(), 'header_subhead_extra', 1))) { ?>
 							<p class="subhead-alt"><?php echo get_post_meta(get_the_ID(), 'header_subhead_extra', 1); ?></p>
 						<?php } ?>
-						<?php if( (!empty(get_post_meta(get_the_ID(), 'header_primary_button_text', 1)) && (!empty(get_post_meta(get_the_ID(), 'header_primary_button_url', 1)))) || (!empty(get_post_meta(get_the_ID(), 'header_secondary_button_text', 1)) && (!empty(get_post_meta(get_the_ID(), 'header_secondary_button_url', 1))))  ) { ?>
+						<?php if( (!empty(get_post_meta(get_the_ID(), 'header_primary_button_text', 1)) && (!empty(get_post_meta(get_the_ID(), 'header_primary_button_url', 1)))) || (!empty(get_post_meta(get_the_ID(), 'header_secondary_button_text', 1)) && (!empty(get_post_meta(get_the_ID(), 'header_secondary_button_url', 1)))) || (!empty(get_post_meta(get_the_ID(), 'header_first_custom_button'))) || (!empty(get_post_meta(get_the_ID(), 'header_last_custom_button')))) { ?>
 							<div class="button-wrap">
 						<?php } ?>
+
+							<?php echo get_post_meta(get_the_ID(), 'header_first_custom_button', 1); ?>
+
 							<?php if(!empty(get_post_meta(get_the_ID(), 'header_primary_button_text', 1)) && (!empty(get_post_meta(get_the_ID(), 'header_primary_button_url', 1)))) { ?>
 									<a class="button-green-fill" href="<?php echo get_post_meta(get_the_ID(), 'header_primary_button_url', 1); ?>"><?php echo get_post_meta(get_the_ID(), 'header_primary_button_text', 1); ?></a>
 							<?php } ?>
 							<?php if(!empty(get_post_meta(get_the_ID(), 'header_secondary_button_text', 1)) && (!empty(get_post_meta(get_the_ID(), 'header_secondary_button_url', 1)))) { ?>
 								<a class="button-green-fill" href="<?php echo get_post_meta(get_the_ID(), 'header_secondary_button_url', 1); ?>"><?php echo get_post_meta(get_the_ID(), 'header_secondary_button_text', 1); ?></a>
 							<?php } ?>
+
+							<?php echo get_post_meta(get_the_ID(), 'header_last_custom_button', 1); ?>
+
 						<?php if( (!empty(get_post_meta(get_the_ID(), 'header_primary_button_text', 1)) && (!empty(get_post_meta(get_the_ID(), 'header_primary_button_url', 1)))) || (!empty(get_post_meta(get_the_ID(), 'header_secondary_button_text', 1)) && (!empty(get_post_meta(get_the_ID(), 'header_secondary_button_url', 1))))  ) { ?>
 							</div>
 						<?php } ?>
