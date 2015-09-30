@@ -7,6 +7,7 @@ body.page-template-page-home-v3
 		background-size:cover;
 		background-position:center;
 		border-bottom:1px solid $dark-gray;
+		z-index: 50;
 	}
 
 	.footer-cta {
@@ -23,5 +24,7 @@ body.page-template-page-home {
 	.core-point {
 		padding-top:120px; // account for nav
 		height:100vh;
+		margin-top:-100px; //clear whitespace
+		z-index: 40;
 	}
 }
