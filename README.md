@@ -28,6 +28,7 @@ Headers all share the same custom fields. They are as follows:
 - `header_secondary_button_text` *optional*
 - `header_secondary_button_url` *optional*
 - `header_color` - This accepts values of `green`, `white` or `gray`
+- `header_replace_content` - Replaces ALL content within the visible header, apart from the navigation
 
 ### Footers
 These don't apply to the `Free Request` template or the `Squeeze Page` template.

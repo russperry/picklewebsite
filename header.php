@@ -62,38 +62,42 @@
 				</nav>
 
 				<div class="dheader-content flex full-width text-center" style="width:100%;">
-					<div class="wide-650">
-						<h1 class="title"><?php if (empty(get_post_meta(get_the_ID(), 'header_h1', 1))){ echo get_the_title(); } else { echo get_post_meta(get_the_ID(), 'header_h1', 1); } ?></h1>
+					<?php if(!empty(get_post_meta(get_the_ID(), 'replace_header_content', 1))) { ?>
+						<?php echo get_post_meta(get_the_ID(), 'replace_header_content', 1); ?>
+					<?php } else { ?>
+						<div class="wide-650">
+							<h1 class="title"><?php if (empty(get_post_meta(get_the_ID(), 'header_h1', 1))){ echo get_the_title(); } else { echo get_post_meta(get_the_ID(), 'header_h1', 1); } ?></h1>
 
-						<?php if(!empty(get_post_meta(get_the_ID(), 'header_subhead', 1))) { ?>
-							<p class="subhead"><?php echo get_post_meta(get_the_ID(), 'header_subhead', 1); ?></p>
-						<?php } ?>
-						<?php if(!empty(get_post_meta(get_the_ID(), 'header_subhead_extra', 1))) { ?>
-							<p class="subhead-alt"><?php echo get_post_meta(get_the_ID(), 'header_subhead_extra', 1); ?></p>
-						<?php } ?>
-						<?php if( (!empty(get_post_meta(get_the_ID(), 'header_primary_button_text', 1)) && (!empty(get_post_meta(get_the_ID(), 'header_primary_button_url', 1)))) || (!empty(get_post_meta(get_the_ID(), 'header_secondary_button_text', 1)) && (!empty(get_post_meta(get_the_ID(), 'header_secondary_button_url', 1)))) || (!empty(get_post_meta(get_the_ID(), 'header_first_custom_button'))) || (!empty(get_post_meta(get_the_ID(), 'header_last_custom_button')))) { ?>
-							<div class="button-wrap">
-						<?php } ?>
-
-							<?php echo get_post_meta(get_the_ID(), 'header_first_custom_button', 1); ?>
-
-							<?php if(!empty(get_post_meta(get_the_ID(), 'header_primary_button_text', 1)) && (!empty(get_post_meta(get_the_ID(), 'header_primary_button_url', 1)))) { ?>
-									<a class="button-green-fill" href="<?php echo get_post_meta(get_the_ID(), 'header_primary_button_url', 1); ?>"><?php echo get_post_meta(get_the_ID(), 'header_primary_button_text', 1); ?></a>
+							<?php if(!empty(get_post_meta(get_the_ID(), 'header_subhead', 1))) { ?>
+								<p class="subhead"><?php echo get_post_meta(get_the_ID(), 'header_subhead', 1); ?></p>
 							<?php } ?>
-							<?php if(!empty(get_post_meta(get_the_ID(), 'header_secondary_button_text', 1)) && (!empty(get_post_meta(get_the_ID(), 'header_secondary_button_url', 1)))) { ?>
-								<a class="button-green-fill" href="<?php echo get_post_meta(get_the_ID(), 'header_secondary_button_url', 1); ?>"><?php echo get_post_meta(get_the_ID(), 'header_secondary_button_text', 1); ?></a>
+							<?php if(!empty(get_post_meta(get_the_ID(), 'header_subhead_extra', 1))) { ?>
+								<p class="subhead-alt"><?php echo get_post_meta(get_the_ID(), 'header_subhead_extra', 1); ?></p>
+							<?php } ?>
+							<?php if( (!empty(get_post_meta(get_the_ID(), 'header_primary_button_text', 1)) && (!empty(get_post_meta(get_the_ID(), 'header_primary_button_url', 1)))) || (!empty(get_post_meta(get_the_ID(), 'header_secondary_button_text', 1)) && (!empty(get_post_meta(get_the_ID(), 'header_secondary_button_url', 1)))) || (!empty(get_post_meta(get_the_ID(), 'header_first_custom_button'))) || (!empty(get_post_meta(get_the_ID(), 'header_last_custom_button')))) { ?>
+								<div class="button-wrap">
 							<?php } ?>
 
-							<?php echo get_post_meta(get_the_ID(), 'header_last_custom_button', 1); ?>
+								<?php echo get_post_meta(get_the_ID(), 'header_first_custom_button', 1); ?>
 
-						<?php if( (!empty(get_post_meta(get_the_ID(), 'header_primary_button_text', 1)) && (!empty(get_post_meta(get_the_ID(), 'header_primary_button_url', 1)))) || (!empty(get_post_meta(get_the_ID(), 'header_secondary_button_text', 1)) && (!empty(get_post_meta(get_the_ID(), 'header_secondary_button_url', 1))))  ) { ?>
-							</div>
-						<?php } ?>
-						<?php if(!empty(get_post_meta(get_the_ID(), 'header_button_support', 1))) { ?>
-						<p class="button-support text-center">7 Day Money-Back Guarantee</p>
-						<?php } ?>
+								<?php if(!empty(get_post_meta(get_the_ID(), 'header_primary_button_text', 1)) && (!empty(get_post_meta(get_the_ID(), 'header_primary_button_url', 1)))) { ?>
+										<a class="button-green-fill" href="<?php echo get_post_meta(get_the_ID(), 'header_primary_button_url', 1); ?>"><?php echo get_post_meta(get_the_ID(), 'header_primary_button_text', 1); ?></a>
+								<?php } ?>
+								<?php if(!empty(get_post_meta(get_the_ID(), 'header_secondary_button_text', 1)) && (!empty(get_post_meta(get_the_ID(), 'header_secondary_button_url', 1)))) { ?>
+									<a class="button-green-fill" href="<?php echo get_post_meta(get_the_ID(), 'header_secondary_button_url', 1); ?>"><?php echo get_post_meta(get_the_ID(), 'header_secondary_button_text', 1); ?></a>
+								<?php } ?>
 
-					</div>
+								<?php echo get_post_meta(get_the_ID(), 'header_last_custom_button', 1); ?>
+
+							<?php if( (!empty(get_post_meta(get_the_ID(), 'header_primary_button_text', 1)) && (!empty(get_post_meta(get_the_ID(), 'header_primary_button_url', 1)))) || (!empty(get_post_meta(get_the_ID(), 'header_secondary_button_text', 1)) && (!empty(get_post_meta(get_the_ID(), 'header_secondary_button_url', 1))))  ) { ?>
+								</div>
+							<?php } ?>
+							<?php if(!empty(get_post_meta(get_the_ID(), 'header_button_support', 1))) { ?>
+							<p class="button-support text-center">7 Day Money-Back Guarantee</p>
+							<?php } ?>
+
+						</div>
+					<?php } ?>
 				</div>
 
 				
